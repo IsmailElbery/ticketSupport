@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+    direction: rtl;
+  }
+
+  /* Flip the alignment of text and blocks */
+  body {
+    text-align: right;
+  }
+
+  /* Adjust the alignment of specific elements */
+  /* For example, to align the navbar to the right */
+  .navbar {
+    text-align: right;
+  }
+
+  /* Adjust the alignment of form inputs */
+  /* For example, to align form inputs to the right */
+  input, textarea {
+    direction: rtl;
+  }
+  .side_bar{
+    background: linear-gradient(to bottom, #5b3283, #3580ab, #5db5b3);
+  }
