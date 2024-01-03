@@ -1,6 +1,6 @@
 <div>
     <x-status />
-    <div class="mb-5 text-2xl font-bold">التسميات</div>
+    <div class="mb-5 text-2xl font-bold">الوسوم</div>
     <div class="max-w-2xl overflow-hidden rounded-lg border border-gray-200 shadow-md">
         <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
             <thead class="bg-gray-50">
@@ -30,7 +30,7 @@
     <div class="mt-8">
         <a href="{{ route('labels.create') }}"
             class="rounded-lg border border-green-500 bg-green-500 px-5 py-2.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-green-700 hover:bg-green-700 focus:ring focus:ring-green-200 disabled:cursor-not-allowed disabled:border-green-300 disabled:bg-green-300">
-            اضافة تسمية
+            اضافة وسم
         </a>
     </div>
 

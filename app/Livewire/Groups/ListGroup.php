@@ -12,7 +12,7 @@ class ListGroup extends Component
 {
     use WithPagination;
 
-    public function deleteCategory(Group $group): void
+    public function deleteGroup(Group $group): void
     {
         $this->authorize('manage', $group);
 

@@ -23,7 +23,12 @@ class CreateTicketRequest extends CustomRequest
     {
         return [
             "title" => 'required',
-            //Todo
+            "status" => 'required',
+            "description" => 'required',
+            "priority" => 'required',
+            "category" => 'required',
+            "label" => 'required',
+
         ];
     }
 }

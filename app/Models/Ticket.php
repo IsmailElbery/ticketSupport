@@ -97,4 +97,6 @@ class Ticket extends Model implements HasMedia
             ->logOnlyDirty()
             ->dontSubmitEmptyLogs();
     }
+
+    
 }

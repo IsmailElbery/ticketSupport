@@ -49,7 +49,7 @@
             </div>
         </div>
         <div>
-            <label for="labels" class="mb-1 block text-sm font-medium text-gray-700">التسمية</label>
+            <label for="labels" class="mb-1 block text-sm font-medium text-gray-700">الوسم</label>
             <div class="flex space-x-6">
                 @foreach ($labels as $label)
                     <label class="flex items-center space-x-2 text-sm font-medium text-gray-700">

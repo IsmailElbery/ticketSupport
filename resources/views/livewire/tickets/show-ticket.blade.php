@@ -42,7 +42,7 @@
                     <span class="rounded-full bg-blue-200 px-2 py-1 text-xs text-blue-800">{{ $category->name }}</span>
                 @endforeach
             </div>
-            <div class="font-bold">التسمية</div>
+            <div class="font-bold">الوسم</div>
             <div class="col-span-5">
                 @foreach ($ticket->labels as $label)
                     <span

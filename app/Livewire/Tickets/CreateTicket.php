@@ -41,7 +41,7 @@ class CreateTicket extends Component
             $ticket->addMediaFromDisk($path, 'media')->toMediaCollection('attachments');
         }
 
-        Mail::send(new TicketCreated($ticket));
+        //Mail::send(new TicketCreated($ticket));
 
         return redirect()->route('tickets.show', $ticket)
             ->with('status', 'Ticket created.');

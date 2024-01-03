@@ -5,17 +5,23 @@
 
 html, body {
     direction: rtl;
+    font-family: 'Alegreya', serif;
+    font-family: 'Almarai', sans-serif;
   }
 
   /* Flip the alignment of text and blocks */
   body {
     text-align: right;
+    font-family: 'Alegreya', serif;
+    font-family: 'Almarai', sans-serif;
   }
 
   /* Adjust the alignment of specific elements */
   /* For example, to align the navbar to the right */
   .navbar {
     text-align: right;
+    font-family: 'Alegreya', serif;
+    font-family: 'Almarai', sans-serif;
   }
 
   /* Adjust the alignment of form inputs */
@@ -25,4 +31,6 @@ html, body {
   }
   .side_bar{
     background: linear-gradient(to bottom, #5b3283, #3580ab, #5db5b3);
+    font-family: 'Alegreya', serif;
+    font-family: 'Almarai', sans-serif;
   }

@@ -1,5 +1,5 @@
 <div class="max-w-xl">
-    <div class="mb-5 text-2xl font-bold">إضافة تسمية</div>
+    <div class="mb-5 text-2xl font-bold">إضافة وسم</div>
     <form wire:submit="save" class="space-y-5">
         <div>
             <label for="name"
@@ -8,7 +8,7 @@
                 'block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50',
                 'border-red-300 focus:border-red-300 focus:ring-red-200' => $errors->has(
                     'name'),
-            ]) placeholder="اسم التسمية" />
+            ]) placeholder="اسم الوسم" />
             @error('name')
                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
             @enderror

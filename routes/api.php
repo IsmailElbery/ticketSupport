@@ -25,6 +25,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::group(['prefix' => 'ticket'], function(){
         Route::post('create', [TicketController::class, 'save'])->name('createTicket');
+        Route::get('all', [TicketController::class, 'getAllTickets'])->name('getAllTickets');
+        Route::get('user/{id}', [TicketController::class, 'getTicketByUser'])->name('getUserTickets');
 
     });
 });

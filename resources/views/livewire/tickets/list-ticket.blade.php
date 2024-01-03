@@ -46,7 +46,7 @@
                     <th scope="col" class="px-6 py-4 font-medium text-gray-400">الحالة</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-400">المكلف بها</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-400">الفئة</th>
-                    <th scope="col" class="px-6 py-4 font-medium text-gray-400">التسمية</th>
+                    <th scope="col" class="px-6 py-4 font-medium text-gray-400">الوسم</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-400">الإجراءات</th>
                 </tr>
             </thead>
