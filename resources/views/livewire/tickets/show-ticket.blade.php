@@ -3,7 +3,7 @@
     <div class="mb-5 text-2xl font-bold">تفاصيل التذكرة</div>
     <div class="rounded-lg border border-gray-200 bg-white shadow-md">
         <div class="grid grid-cols-6 gap-6 p-4">
-            <div class="font-bold">عنوان التذرة</div>
+            <div class="font-bold">عنوان التذكرة</div>
             <div class="col-span-5">{{ ucfirst($ticket->title) }}</div>
             <div class="font-bold">الحالة</div>
             <div class="col-span-5">

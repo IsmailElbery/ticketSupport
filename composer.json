@@ -9,7 +9,7 @@
         "guzzlehttp/guzzle": "^7.8",
         "laravel/breeze": "^1.26.1",
         "laravel/framework": "^10.32.1",
-        "laravel/sanctum": "^3.3.2",
+        "laravel/sanctum": "*",
         "laravel/tinker": "^2.8.2",
         "livewire/livewire": "^3.2.1",
         "spatie/laravel-activitylog": "^4.7.3",
