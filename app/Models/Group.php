@@ -19,4 +19,9 @@ class Group extends Model
     {
         return $this->belongsToMany(Ticket::class);
     }
+
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

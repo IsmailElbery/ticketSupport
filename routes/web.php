@@ -10,6 +10,8 @@ use App\Livewire\Groups\EditGroup;
 use App\Livewire\Categories\ListCategory;
 use App\Livewire\Groups\ListGroup;
 use App\Livewire\DashboardHome;
+use App\Livewire\GroupUser\CreateGroupUser;
+use App\Livewire\GroupUser\ListGroupUser;
 use App\Livewire\Labels\CreateLabel;
 use App\Livewire\Labels\EditLabel;
 use App\Livewire\Labels\ListLabel;
@@ -61,6 +63,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
             Route::get('/', ListGroup::class)->name('index');
             Route::get('/create', CreateGroup::class)->name('create');
             Route::get('/{group}/edit', EditGroup::class)->name('edit');
+            Route::get('/{group}/user', ListGroupUser::class)->name('user');
+            Route::get('/{group}/create-user', CreateGroupUser::class)->name('createUser');
         });
 
 
