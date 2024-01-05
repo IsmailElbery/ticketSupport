@@ -34,10 +34,10 @@
             <div class="flex items-center justify-end gap-2 p-4">
                 <input type="text" wire:model.live="search"
                     class="focus:border-primary-400 focus:ring-primary-200 w-30 block rounded-md border-gray-300 shadow-sm focus:ring focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-                    placeholder="Search..." />
+                    placeholder="بحث..." />
             </div>
         </div>
-        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
+        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500" style="text-align: center;">
             <thead class="bg-gray-50">
                 <tr>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-400">عنوان التذكرة</th>

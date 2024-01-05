@@ -2,7 +2,7 @@
     <x-status />
     <div class="mb-5 text-2xl font-bold">المجموعات</div>
     <div class="max-w-2xl overflow-hidden rounded-lg border border-gray-200 shadow-md">
-        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
+        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500" style="text-align: center;">
             <thead class="bg-gray-50">
                 <tr>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-400">الإسم</th>

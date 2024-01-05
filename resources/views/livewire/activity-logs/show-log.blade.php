@@ -11,7 +11,7 @@
             <div class="col-span-5">
                 {{ ucfirst($log->description) }}
             </div>
-            <div class="font-bold">حدث بسبب</div>
+            <div class="font-bold">أنشئ بواسطة</div>
             <div class="col-span-5">
                 {{ $log->causer?->name }}
             </div>

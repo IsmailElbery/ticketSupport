@@ -7,7 +7,7 @@
                 <tr>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-400">عنوان التذكرة</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-400">وصف التذكرة</th>
-                    <th scope="col" class="px-6 py-4 font-medium text-gray-400">حدث بسبب</th>
+                    <th scope="col" class="px-6 py-4 font-medium text-gray-400">أنشئ بواسطة</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-400">أنشئت منذ</th>
                 </tr>
             </thead>

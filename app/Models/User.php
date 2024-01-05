@@ -43,4 +43,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    //get user role from HasRoles trait
+    public function getRoleAttribute()
+    {
+        return $this->getRoleNames()->first();
+    }
 }

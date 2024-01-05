@@ -10,6 +10,7 @@ use Livewire\WithPagination;
 class ListUser extends Component
 {
     use WithPagination;
+    public string $searchUser = '';
 
     public function deleteUser(User $user): void
     {
@@ -24,8 +25,21 @@ class ListUser extends Component
 
     public function render(): View
     {
+        $filteredUsers = User::where('name', 'like', '%' . $this->searchUser . '%')
+            ->orWhere('email', 'like', '%' . $this->searchUser . '%')
+            //search by role
+            ->orWhereHas('roles', function ($query) {
+                $query->where('name', 'like', '%' . $this->searchUser . '%');
+            })
+            ->when(auth()->user()->hasRole('Agent'), function ($query) {
+                $query->assignedToAgent(auth()->user());
+            })
+            ->when(! auth()->user()->hasAnyRole('Admin', 'Agent'), function ($query) {
+                $query->byUser(auth()->user());
+            });
+
         return view('livewire.users.list-user', [
-            'users' => User::orderBy('name')->paginate(8),
+            'users' => $filteredUsers->latest()->paginate(8),
         ]);
     }
 }
