@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Helpers\FileHelper;
 use App\Http\Requests\Api\CreateTicketRequest;
 use App\Mail\TicketCreated;
 use App\Models\Ticket;
@@ -22,18 +23,21 @@ class TicketController extends Controller
         $ticket->description = $request->description;
         $ticket->status = $request->status;
         $ticket->priority = $request->priority;
+        $ticket->category = $request->category;
+        $ticket->clause = $request->clause;
+        $ticket->student_data = $request->student_data;
         $ticket->user_id = $user_id;
-        
-        if($ticket->save()){
-            $ticket->categories()->sync($request->category);
-            $ticket->labels()->sync($request->lable);
-            if(isset($request->attachments)){
-                foreach ($request->attachments as $attachment) {
-                    $path = $attachment->store('livewire', 'media');
-                    $ticket->addMediaFromDisk($path, 'media')->toMediaCollection('attachments');
-                }
-
+        if(isset($request->attachments)){
+            foreach ($request->attachments as $attachment) {
+                //$attachment is an base64 encoded file
+                $file = FileHelper::uploadBaseFile($attachment['file'], 'uploads/tickets/', $attachment['file_name']);
+                $ticket->attachment = $file;
             }
+        }
+        if($ticket->save()){
+            //$ticket->categories()->sync($request->category);
+            $ticket->labels()->sync($request->lable);
+
 
             //Mail::send(new TicketCreated($ticket));
             return $this->response([],200,'تم تسجيل تذكرتك بنجاح');
@@ -43,6 +47,8 @@ class TicketController extends Controller
 
 
     }
+
+    
 
     public function getAllTickets()
     {

@@ -27,7 +27,8 @@ class CreateTicketRequest extends CustomRequest
             "description" => 'required',
             "priority" => 'required',
             "category" => 'required',
-            "label" => 'required',
+            "student_data" => 'required',
+            "clause" => 'required',
 
         ];
     }
