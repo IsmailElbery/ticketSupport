@@ -19,7 +19,7 @@ class TicketController extends Controller
         //ToDo
         $user_id = auth('api')->user()->id;
         $ticket = new Ticket();
-        $ticket->title = $request->title;
+        $ticket->title = $request->subject;
         $ticket->description = $request->description;
         $ticket->status = $request->status;
         $ticket->priority = $request->priority;
@@ -48,7 +48,7 @@ class TicketController extends Controller
 
     }
 
-    
+
 
     public function getAllTickets()
     {
